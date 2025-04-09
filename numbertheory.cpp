@@ -50,4 +50,10 @@ namespace NumTh
         // is prime if and only if Phi(n) = n - 1
         return (eulerPhi(n) == (n-1));
     }
+
+    // Overload isPrime to allow for the case where we have already calculated phi
+    bool isPrime(int n, int phi)
+    {
+        return (phi == (n-1));
+    }
 }

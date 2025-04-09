@@ -14,6 +14,8 @@ namespace NumTh
     int eulerPhi(int n);
 
     bool isPrime(int n);
+
+    bool isPrime(int n, int phi);
 }
 
 #endif

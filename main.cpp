@@ -20,12 +20,9 @@ int main()
     // Display the result to the user
     std::cout << "Phi(" << n << ") = " << totient << '\n';
 
-    /*
-     * Check if n is prime. Note: We are implicitly calling eulerPhi twice in this
-     * program, so in an efficiency critical operation, we could/would refactor the 
-     * code to avoid this second function call.
-     */
-    std::string is_prime {NT::isPrime(n) ? " is prime.\n": " is not prime.\n"};
+    // Since we have overloaded isPrime, we can use the pre-computed phi value without
+    // having to re-compute it
+    std::string is_prime {NT::isPrime(n, totient) ? " is prime.\n": " is not prime.\n"};
 
     // Display primality result to the user
     std::cout << "The integer " << n << is_prime;
